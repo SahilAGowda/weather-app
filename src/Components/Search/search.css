@@ -1,0 +1,217 @@
+/* Main container styles with enhanced spacing */
+.AsyncPaginate {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    position: relative;
+  }
+  
+  /* Search input container with glass morphism effect */
+  .AsyncPaginate .select__control {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(52, 152, 219, 0.15);
+    border-radius: 20px;
+    min-height: 60px;
+    box-shadow: 
+      0 4px 6px rgba(0, 0, 0, 0.02),
+      0 1px 3px rgba(0, 0, 0, 0.03),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .AsyncPaginate .select__control:hover {
+    border-color: rgba(52, 152, 219, 0.3);
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.03),
+      0 2px 4px rgba(0, 0, 0, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+  }
+  
+  .AsyncPaginate .select__control--is-focused {
+    border-color: #3498db !important;
+    box-shadow: 
+      0 8px 16px rgba(52, 152, 219, 0.1),
+      0 2px 4px rgba(52, 152, 219, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px);
+  }
+  
+  /* Enhanced input text styles */
+  .AsyncPaginate .select__input {
+    color: #2c3e50 !important;
+    font-size: 17px !important;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  .AsyncPaginate .select__placeholder {
+    color: #95a5a6;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  
+  .AsyncPaginate .select__single-value {
+    color: #2c3e50;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Modernized dropdown menu */
+  .AsyncPaginate .select__menu {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    margin-top: 12px;
+    box-shadow: 
+      0 15px 35px rgba(0, 0, 0, 0.1),
+      0 5px 15px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    overflow: hidden;
+    animation: slideDown 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Enhanced option styles */
+  .AsyncPaginate .select__option {
+    padding: 14px 18px;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 3px solid transparent;
+  }
+  
+  .AsyncPaginate .select__option:hover {
+    background-color: rgba(52, 152, 219, 0.08);
+    border-left-color: rgba(52, 152, 219, 0.5);
+    padding-left: 24px;
+  }
+  
+  .AsyncPaginate .select__option--is-selected {
+    background-color: #3498db !important;
+    color: white !important;
+    font-weight: 500;
+    border-left-color: #2980b9;
+  }
+  
+  .AsyncPaginate .select__option--is-focused {
+    background-color: rgba(52, 152, 219, 0.05);
+    border-left-color: rgba(52, 152, 219, 0.3);
+  }
+  
+  /* Refined loading indicator */
+  .AsyncPaginate .select__indicator-separator {
+    display: none;
+  }
+  
+  .AsyncPaginate .select__loading-indicator {
+    color: #3498db;
+  }
+  
+  /* Enhanced clear button */
+  .AsyncPaginate .select__clear-indicator {
+    color: #95a5a6;
+    cursor: pointer;
+    padding: 0 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.7;
+  }
+  
+  .AsyncPaginate .select__clear-indicator:hover {
+    color: #e74c3c;
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Animated dropdown indicator */
+  .AsyncPaginate .select__dropdown-indicator {
+    color: #95a5a6;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 10px;
+  }
+  
+  .AsyncPaginate .select__control--menu-is-open .select__dropdown-indicator {
+    transform: rotate(180deg);
+    color: #3498db;
+  }
+  
+  /* Enhanced dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .AsyncPaginate .select__control {
+      background: rgba(44, 62, 80, 0.85);
+      border-color: rgba(52, 152, 219, 0.2);
+      box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+  
+    .AsyncPaginate .select__control:hover {
+      background: rgba(44, 62, 80, 0.9);
+      border-color: rgba(52, 152, 219, 0.4);
+    }
+  
+    .AsyncPaginate .select__input {
+      color: #ecf0f1 !important;
+    }
+  
+    .AsyncPaginate .select__single-value {
+      color: #ecf0f1;
+    }
+  
+    .AsyncPaginate .select__placeholder {
+      color: #7f8c8d;
+    }
+  
+    .AsyncPaginate .select__menu {
+      background-color: rgba(44, 62, 80, 0.95);
+      border-color: rgba(52, 152, 219, 0.15);
+      box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+  
+    .AsyncPaginate .select__option {
+      color: #ecf0f1;
+    }
+  
+    .AsyncPaginate .select__option:hover {
+      background-color: rgba(52, 152, 219, 0.15);
+    }
+  
+    .AsyncPaginate .select__option--is-focused {
+      background-color: rgba(52, 152, 219, 0.1);
+    }
+  }
+  
+  /* Refined mobile optimization */
+  @media (max-width: 768px) {
+    .AsyncPaginate {
+      max-width: 100%;
+      margin: 15px 12px;
+    }
+  
+    .AsyncPaginate .select__control {
+      min-height: 56px;
+    }
+  
+    .AsyncPaginate .select__option {
+      padding: 12px 16px;
+    }
+  }
