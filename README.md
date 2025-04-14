@@ -21,7 +21,7 @@ This is a simple weather app that provides real-time weather updates.
 ---
 
 ## 🛠 Technologies Used  
-- **Frontend**: HTML, CSS, JavaScript  
+- **Frontend**: React, CSS, JavaScript  
 - **API**: OpenWeather API  
 
 ---
